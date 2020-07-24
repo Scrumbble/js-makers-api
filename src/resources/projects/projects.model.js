@@ -15,8 +15,7 @@ const projectsSchema = new mongoose.Schema(
             maxlength: 120
         },
         coverImage: {
-            type: Buffer,
-            required: true,
+            type: Buffer
         },
         tags: [{
             type: String
