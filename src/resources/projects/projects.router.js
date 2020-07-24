@@ -1,21 +1,17 @@
 import { Router } from 'express'
-//import { } from './projects.controllers'
-
-const controllers = (req, res) => {
-    res.send({ message: 'Hello' })
-}
+import controllers from './projects.controllers'
 
 const router = Router()
 
 // api/projects
 router.route('/')
-    .get(controllers)
-    .post(controllers)
+    .get(controllers.getOne)
+    .post(controllers.createOne)
 
 // api/projects/:id
 router.route('/:id')
-    .get(controllers)
-    .put(controllers)
-    .delete(controllers)
+    .get(controllers.getOne)
+    .put(controllers.updateOne)
+    .delete(controllers.removeOne)
 
 export default router
