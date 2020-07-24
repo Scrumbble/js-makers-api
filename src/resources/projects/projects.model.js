@@ -22,12 +22,10 @@ const projectsSchema = new mongoose.Schema(
         }],
         createdBy: {
             type: mongoose.SchemaTypes.ObjectId,
-            ref: 'user',
-            required: true
+            ref: 'user'
         },
         liveUrl: {
-            type: String,
-            required: true
+            type: String
         },
         githubUrl: {
             type: String

@@ -3,9 +3,9 @@ import { json, urlencoded } from 'body-parser'
 import morgan from 'morgan'
 import config from './config'
 import cors from 'cors'
-//import { signup, signin, protect } from './utils/auth'
+import { signup, signin, protect } from './utils/auth'
 import { connect } from './utils/db'
-//import userRouter from './resources/user/user.router'
+import userRouter from './resources/user/user.router'
 import projectsRouter from './resources/projects/projects.router'
 //import blogRouter from './resources/blog/blog.router'
 
@@ -18,11 +18,11 @@ app.use(json())
 app.use(urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
-//app.post('/signup', signup)
-//app.post('/signin', signin)
+app.post('/signup', signup)
+app.post('/signin', signin)
 
 //app.use('/api', protect)
-//app.use('/api/user', userRouter)
+app.use('/api/user', userRouter)
 app.use('/api/projects', projectsRouter)
 //app.use('/api/blog', blogRouter)
 
