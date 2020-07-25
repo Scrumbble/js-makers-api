@@ -38,6 +38,6 @@ src
 │   |   ├── auth.js
 │   |   ├── crud.js
 │   ├── └── db.js
-├── index.js                                 # Starts or kicks off the server.
+├── index.js                                 # Kicks off the server.
 └── server.js                                # The root server file.
 ```
