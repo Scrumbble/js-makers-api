@@ -6,6 +6,7 @@ const router = Router()
 // api/projects
 router.route('/')
     .get(controllers.getOne)
+    .get(controllers.getMany)
     .post(controllers.createOne)
 
 // api/projects/:id
