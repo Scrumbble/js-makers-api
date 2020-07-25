@@ -1,6 +1,6 @@
 export const config = {
   secrets: {
-    jwt: 'learneverything'
+    jwt: 'jsmakersjwtsecret'
   },
   dbUrl: 'mongodb://localhost:27017/jsmakersdb'
 }
