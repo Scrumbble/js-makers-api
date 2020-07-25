@@ -1,6 +1,6 @@
 export const getOne = model => async (req, res) => {
   const id = req.params.id
-  const user = req.user._id
+  const userId = req.user._id
   const doc = await model.findOne({ _id: id, createdBy: userId })
     .exec()
 

@@ -22,7 +22,8 @@ const projectsSchema = new mongoose.Schema(
         }],
         createdBy: {
             type: mongoose.SchemaTypes.ObjectId,
-            ref: 'user'
+            ref: 'user',
+            required: true
         },
         liveUrl: {
             type: String
